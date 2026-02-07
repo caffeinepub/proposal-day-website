@@ -1,0 +1,238 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 9,
+  "summary": "Build a simple, clean, responsive Proposal Day single-page website with Hero, a polished animated vertical Timeline (rounded cards with date/title/1-line description), and an interactive Proposal section with animated text, Yes/No buttons, celebratory confetti/hearts on Yes, and playful escalating No-button messages with eventual random movement.",
+  "architectural_notes": [
+    "Single-page responsive layout with sections: Hero, Timeline, Proposal",
+    "Romantic theme styling with lightweight animations; button click triggers celebration effect (hearts/confetti) and message",
+    "Timeline items include date, title, and 1-line description displayed in rounded cards within a vertical timeline layout",
+    "Use scroll-triggered soft fade/slide animations for timeline cards",
+    "Proposal section includes both Yes and No buttons; No button cycles through predefined messages per click and later moves randomly",
+    "Timeline layout/interaction should not rely on a vertical-scroll behavior the user dislikes (revise UX to an alternative presentation while keeping content accessible).",
+    "If using a horizontal/non-vertical timeline, include clear date/time labels and obvious navigation (arrows/dots/scroll hint) so users understand how to view all events."
+  ],
+  "known_issues": [
+    "Proposal section: No button overlaps the Yes button.",
+    "Proposal section: The funny/escalating No-button message text is overlapping/misaligned (layout issue).",
+    "Timeline (revised horizontal/non-vertical layout): date/time and how to navigate the timeline are not clear to the user; needs clearer affordance/labels."
+  ],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-simple-clean-responsive-single-page-proposal-day-website-with-three-sections-hero-timeline-and-proposal",
+      "title": "Create a simple, clean, responsive single-page Proposal Day website with three sections: Hero, Timeline, and Proposal.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-hero-section-with-a-big-romantic-headline-about-the-5-year-relationship-and-a-short-subtitle",
+      "title": "Implement the Hero section with a big romantic headline about the 5-year relationship and a short subtitle.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-timeline-section-that-displays-the-provided-relationship-events-in-chronological-order-with-date-and-label",
+      "title": "Implement the Timeline section that displays the provided relationship events in chronological order with date and label.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-proposal-section-with-the-exact-proposal-text-and-a-prominent-yes-button",
+      "title": "Implement the Proposal section with the exact proposal text and a prominent “Yes” button.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-yes-button-interaction-that-triggers-a-celebratory-effect-hearts-and-or-confetti-and-shows-a-celebration-message",
+      "title": "Add a “Yes” button interaction that triggers a celebratory effect (hearts and/or confetti) and shows a celebration message.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-romantic-visual-theme-and-basic-animations-across-the-page-while-keeping-the-overall-design-simple-clean-and-functional-use-a-cohesive-palette-avoid-blue-purple-and-consistent-typography-spacing-and-component-styling",
+      "title": "Apply a romantic visual theme and basic animations across the page while keeping the overall design simple, clean, and functional. Use a cohesive palette (avoid blue/purple) and consistent typography, spacing, and component styling.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-timeline-section-to-use-rounded-timeline-cards-that-display-date-title-and-a-1-line-description-for-each-timeline-item-using-the-exact-items-and-descriptions-provided-by-the-user",
+      "title": "Update the Timeline section to use rounded timeline cards that display date, title, and a 1-line description for each timeline item, using the exact items and descriptions provided by the user.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-soft-fade-in-or-slide-in-animation-that-triggers-when-each-timeline-card-scrolls-into-view-not-only-on-initial-page-load",
+      "title": "Add a soft fade-in or slide-in animation that triggers when each Timeline card scrolls into view (not only on initial page load).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-proposal-section-to-include-two-buttons-yes-and-no-displayed-together-in-a-centered-buttons-area",
+      "title": "Update the Proposal section to include two buttons: “Yes” and “No”, displayed together in a centered buttons area.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-no-button-interaction-each-click-shows-the-next-message-in-the-provided-sequence-one-by-one-after-a-few-clicks-make-the-no-button-move-to-a-random-position-so-it-becomes-harder-to-click",
+      "title": "Implement the “No” button interaction: each click shows the next message in the provided sequence, one by one; after a few clicks, make the “No” button move to a random position so it becomes harder to click.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-yes-button-result-to-show-a-firecracker-confetti-style-celebration-in-addition-to-hearts-and-display-the-happy-quote-exactly-as-provided-yay-this-is-the-beginning-of-our-forever",
+      "title": "Update the “Yes” button result to show a firecracker/confetti-style celebration (in addition to hearts) and display the happy quote exactly as provided: “Yay! This is the beginning of our forever 💖”.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-site-visual-theme-with-a-new-cohesive-style-colors-gradients-background-decorations-and-component-styling-because-the-user-dislikes-the-current-theme-keep-the-overall-design-clean-and-romantic-and-continue-to-avoid-blue-purple-tones-across-the-ui-including-celebration-confetti-colors",
+      "title": "Replace the current site visual theme with a new cohesive style (colors, gradients, background decorations, and component styling) because the user dislikes the current theme. Keep the overall design clean and romantic, and continue to avoid blue/purple tones across the UI (including celebration confetti colors).",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-revise-the-timeline-section-layout-interaction-to-avoid-the-current-long-vertical-scrolling-behavior-by-presenting-the-timeline-in-a-way-that-reduces-vertical-page-length-e-g-horizontal-timeline-track-while-keeping-all-existing-timeline-events-date-title-1-line-description-and-maintaining-a-tasteful-reveal-entrance-animation",
+      "title": "Revise the Timeline section layout/interaction to avoid the current long vertical scrolling behavior by presenting the timeline in a way that reduces vertical page length (e.g., horizontal timeline/track) while keeping all existing timeline events (date, title, 1-line description) and maintaining a tasteful reveal/entrance animation.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-proposal-section-so-the-no-button-never-overlaps-the-yes-button-at-any-time-including-when-the-no-button-becomes-absolute-and-starts-moving-ensure-the-moving-no-button-stays-fully-visible-within-its-container-and-does-not-cover-the-yes-button",
+      "title": "Fix the Proposal section so the “No” button never overlaps the “Yes” button at any time (including when the “No” button becomes absolute and starts moving). Ensure the moving “No” button stays fully visible within its container and does not cover the “Yes” button.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-funny-escalating-no-click-message-text-layout-so-it-never-overlaps-misaligns-with-the-buttons-and-change-the-no-click-messages-to-english-phrases-keep-them-playful-romantic",
+      "title": "Fix the “funny” (escalating) No-click message text layout so it never overlaps/misaligns with the buttons, and change the No-click messages to English phrases (keep them playful/romantic).",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-improve-the-horizontal-timeline-section-so-users-immediately-understand-it-is-horizontally-scrollable-and-can-clearly-read-the-date-time-for-each-milestone-while-keeping-the-section-compact-and-visually-romantic",
+      "title": "Improve the horizontal Timeline section so users immediately understand it is horizontally scrollable and can clearly read the date/time for each milestone, while keeping the section compact and visually romantic.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-optional-non-intrusive-navigation-helpers-for-the-horizontal-timeline-to-make-browsing-milestones-feel-smooth-and-finished-e-g-snap-to-card-behavior-and-or-left-right-controls-that-scroll-one-card-at-a-time",
+      "title": "Add optional, non-intrusive navigation helpers for the horizontal timeline to make browsing milestones feel smooth and “finished” (e.g., snap-to-card behavior and/or left-right controls that scroll one card at a time).",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-polish-the-timeline-section-visuals-to-look-cleaner-and-more-premium-while-preserving-the-existing-events-card-layout-and-reveal-animation-style-no-new-content-only-presentation-ux-improvements",
+      "title": "Polish the Timeline section visuals to look cleaner and more premium while preserving the existing events, card layout, and reveal animation style (no new content; only presentation/UX improvements).",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create Hero section with a big romantic headline about the 5-year relationship and a short subtitle",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Create Timeline section listing provided relationship events in chronological order",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Create Proposal section with the given proposal text and a Yes button",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add Yes-button interaction that triggers hearts/confetti and shows a celebration message",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Apply romantic color theme, basic animations, and ensure the site is responsive",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Polish Timeline section: vertical timeline with rounded cards; each item shows date, title, and 1-line description; add soft fade/slide animation on scroll",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Add a No button to the Proposal section with sequential click messages and after a few clicks make the No button move randomly",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Set Proposal section centered animated proposal text to: “After five years of love and memories, will you be mine forever?” and include both Yes and No buttons",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Change the site’s visual theme (user dislikes current theme)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Revise the Timeline interaction/layout to avoid the current vertical scrolling behavior (user dislikes vertical scroll)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Improve the revised (non-vertical) Timeline UX so the date/time is clearly visible/understandable and the horizontal interaction looks polished (e.g., clearer labels + navigation/scroll affordance)",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Proposal Day website",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

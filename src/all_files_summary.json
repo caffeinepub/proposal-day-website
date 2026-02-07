@@ -1,0 +1,21 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no methods.",
+  "feature_evidence.json": "Feature evidence listing three timeline‑related UX improvements and their associated files, components, and test IDs.",
+  "frontend-file-summaries.txt": "Text file containing short descriptions of various frontend React components, hooks, and styles.",
+  "frontend/index.css": "Base Tailwind setup defining CSS variables for light and dark themes and applying global background and text colors.",
+  "frontend/index.html": "HTML entry point mounting the React app and loading main.tsx.",
+  "frontend/src/App.tsx": "Main React component rendering Hero, Timeline, and Proposal sections plus a footer.",
+  "frontend/src/components/celebration/CelebrationEffect.tsx": "Generates and animates falling heart and confetti particles using warm colors.",
+  "frontend/src/components/sections/HeroSection.tsx": "Hero section with decorative background blobs and large animated romantic heading.",
+  "frontend/src/components/sections/ProposalSection.tsx": "Proposal UI with Yes/No buttons, moving No button logic, playful messages, and celebration trigger.",
+  "frontend/src/components/sections/TimelineSection.tsx": "Horizontally scrollable timeline with animated event cards, scroll hint, and navigation controls.",
+  "frontend/src/hooks/useActor.ts": "Creates and caches an authenticated or anonymous backend actor and refreshes dependent queries when the identity changes.",
+  "frontend/src/hooks/useHorizontalTimelineNav.ts": "Provides horizontal scroll controls, refs, and state for timeline navigation with interaction tracking.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Implements Internet Identity auth context, handling login, stored identity loading, and status tracking.",
+  "frontend/src/hooks/useInView.ts": "Uses IntersectionObserver to track when an element enters the viewport, with optional one-time triggering.",
+  "frontend/src/index.css": "Defines Tailwind base layers, theme variables, and custom animations and utilities for styling.",
+  "frontend/src/lib/utils.ts": "Exports a helper for merging Tailwind class names using clsx and tailwind-merge.",
+  "frontend/src/main.tsx": "Initializes React root, sets up QueryClient and Internet Identity provider, and renders the app.",
+  "frontend/tailwind.config.js": "Configures Tailwind theme, colors, typography, and plugins for the project.",
+  "project_state.json": "Describes project state, requirements, existing features, and known UI/UX issues for the Proposal Day site."
+}

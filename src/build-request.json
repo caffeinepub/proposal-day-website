@@ -1,0 +1,87 @@
+{
+  "kind": "build_request",
+  "title": "Make the horizontal timeline easier to understand and more polished",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-16",
+      "text": "Improve the horizontal Timeline section so users immediately understand it is horizontally scrollable and can clearly read the date/time for each milestone, while keeping the section compact and visually romantic.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "In this all good but time also good but any but can’t know hrer horizontal scroll show time like show your way but i eant to just look good"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Timeline clearly communicates horizontal navigation via at least two visual affordances (e.g., subtle left/right edge fades, an inline hint text like “Scroll to explore →”, visible drag/scroll indicator, or arrow controls).",
+        "Each timeline card’s date is visually distinct (font weight/size/contrast) and remains easy to scan on mobile and desktop.",
+        "No user-facing text added for guidance uses non-English language (all guidance/hints must be English).",
+        "Horizontal timeline remains shorter than an equivalent vertical list and does not introduce long vertical scrolling."
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "text": "Add optional, non-intrusive navigation helpers for the horizontal timeline to make browsing milestones feel smooth and “finished” (e.g., snap-to-card behavior and/or left-right controls that scroll one card at a time).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "can’t know hrer horizontal scroll show time",
+          "i eant to just look good"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can reliably move through timeline items without precision scrolling on both trackpad/mouse and touch (mobile).",
+        "If snap behavior is implemented, the scroll position settles cleanly on a card boundary (no awkward half-visible cards after interaction).",
+        "Any added controls do not overlap timeline content and remain accessible on small screens."
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "text": "Polish the Timeline section visuals to look cleaner and more premium while preserving the existing events, card layout, and reveal animation style (no new content; only presentation/UX improvements).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "i eant to just look good"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All existing timeline events (date, title, 1-line description) remain unchanged and in the same order as currently implemented.",
+        "Existing entrance/reveal animation behavior remains (items animate in as they come into view), but the overall timeline looks more cohesive (spacing, alignment, and decorative line/dots feel intentional).",
+        "Design continues to avoid blue/purple tones for timeline UI elements."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
+    "Keep the timeline content (dates/titles/descriptions) exactly as currently defined in the Timeline section; do not add/remove milestones.",
+    "Do not introduce blue/purple tones into new UI elements."
+  ],
+  "nonGoals": [
+    "Changing the Hero section content or layout.",
+    "Changing Proposal section behavior (Yes/No interactions) as part of this request.",
+    "Adding backend logic, storage, or any new canister methods."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

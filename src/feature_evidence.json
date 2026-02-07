@@ -1,0 +1,62 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-improve-the-horizontal-timeline-section-so-users-immediately-understand-it-is-horizontally-scrollable-and-can-clearly-read-the-date-time-for-each-milestone-while-keeping-the-section-compact-and-visually-romantic",
+      "featureTitle": "Improve the horizontal Timeline section so users immediately understand it is horizontally scrollable and can clearly read the date/time for each milestone, while keeping the section compact and visually romantic.",
+      "files": [
+        "frontend/src/components/sections/TimelineSection.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-16"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-optional-non-intrusive-navigation-helpers-for-the-horizontal-timeline-to-make-browsing-milestones-feel-smooth-and-finished-e-g-snap-to-card-behavior-and-or-left-right-controls-that-scroll-one-card-at-a-time",
+      "featureTitle": "Add optional, non-intrusive navigation helpers for the horizontal timeline to make browsing milestones feel smooth and “finished” (e.g., snap-to-card behavior and/or left-right controls that scroll one card at a time).",
+      "files": [
+        "frontend/src/components/sections/TimelineSection.tsx",
+        "frontend/src/hooks/useHorizontalTimelineNav.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-17"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-polish-the-timeline-section-visuals-to-look-cleaner-and-more-premium-while-preserving-the-existing-events-card-layout-and-reveal-animation-style-no-new-content-only-presentation-ux-improvements",
+      "featureTitle": "Polish the Timeline section visuals to look cleaner and more premium while preserving the existing events, card layout, and reveal animation style (no new content; only presentation/UX improvements).",
+      "files": [
+        "frontend/src/components/sections/TimelineSection.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-18"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
