@@ -1,72 +1,56 @@
 {
   "kind": "build_request",
-  "title": "Fix timeline wording, improve hero/background styling, and reduce proposal button sizes",
+  "title": "Proposal section: put Yes/No buttons on the same line and add the provided romantic poem",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-21",
-      "text": "Update the Timeline milestone title text from “First time she came to my home” to exactly “First time you came to my home”.",
+      "id": "REQ-24",
+      "text": "Update the Proposal section so the “Yes” and “No” buttons are displayed side-by-side on the same line in a single centered buttons row, while preserving all current button behaviors (Yes triggers celebration; No cycles messages and eventually moves).",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "First time she came to my home To First time you came to my home"
+          "In this yes and no btutton beside same line both btn make samll"
         ]
       },
       "acceptanceCriteria": [
-        "In the Timeline section, the milestone currently titled “First time she came to my home” is changed to exactly “First time you came to my home”.",
-        "No other timeline event titles, dates, or descriptions are modified."
+        "On initial render (before the No button starts moving), the Yes and No buttons appear in one centered horizontal row with consistent spacing.",
+        "Both buttons are visibly smaller than the current styling and not oversized on mobile or desktop (no text wrapping inside the buttons).",
+        "All existing interactions remain unchanged: Yes triggers the same celebration message and effects; No still advances the message sequence and begins moving after the same number of clicks.",
+        "The No button must never overlap or cover the Yes button at any time, including after it becomes absolutely positioned and moves."
       ]
     },
     {
-      "id": "REQ-22",
-      "text": "Revise the website’s overall background color styling and improve the Hero (starting) section styling to look more impressive, while keeping the design clean, romantic, and avoiding blue/purple tones.",
+      "id": "REQ-25",
+      "text": "Add the user-provided romantic poem lines to the Proposal section UI and style them so they look polished and readable within the section (no overlap with the headline, messages, or buttons).",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "background colour of while web and staring part of web i dont like make impressive"
+          "also add this one\n\nकी बताने की बात तो नहीं है पर बताने दोगी क्या ?\nइश्क़ बेपनाह हैं तुमसे\nएक बार जताने दोगी क्या\nऔर तुम नदी, तुम पहाड़, तुम तितली, तुम आसमान हो मेरा\nएक डिबिया में सिंदूर रखा है हमारे पास तुम...\nलगाने दोगी क्या ?"
         ]
       },
       "acceptanceCriteria": [
-        "The global page background color (site-wide) is updated to a new cohesive warm/romantic background (no blue/purple hues).",
-        "The Hero section visual presentation is noticeably improved (e.g., background treatment, decorative elements, typography polish) while keeping the existing content and single-page layout intact.",
-        "The site remains responsive across mobile/tablet/desktop and retains readable contrast for all text."
-      ]
-    },
-    {
-      "id": "REQ-23",
-      "text": "Reduce the size of the “Yes” and “No” buttons in the Proposal section so they are no longer oversized, while preserving their current interactions/behavior (Yes triggers celebration; No shows escalating messages and moves after a few clicks).",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-4"
-        ],
-        "quotes": [
-          "yes and no btuon was toobig so change this also"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The Proposal section “Yes” and “No” buttons are smaller than the current implementation (reduced padding and/or font size) on both mobile and desktop.",
-        "Button labels remain in English and unchanged (including existing punctuation/emojis if present).",
-        "All existing Proposal interactions continue to work: Yes triggers the celebration message and effect; No advances messages and begins moving after the configured number of clicks.",
-        "The “No” button still does not overlap the “Yes” button and stays fully visible within its container while moving."
+        "The poem is rendered in the Proposal section as multi-line text with intentional line breaks and good spacing.",
+        "The poem text is displayed exactly as provided by the user (same characters and punctuation).",
+        "The poem remains readable on small screens (no clipping/overlap) and does not interfere with the No-message area or the buttons row layout.",
+        "When the celebration view is shown (after clicking Yes), the poem does not cause layout overlap with the celebration message/effect."
       ]
     }
   ],
   "constraints": [
-    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
-    "Keep the app as a single-page site with the existing three sections (Hero, Timeline, Proposal).",
-    "Avoid blue/purple tones in the updated background/hero styling and keep a romantic, clean look."
+    "Frontend must not modify any files under frontend/src/components/ui (compose existing UI components instead).",
+    "Preserve existing Proposal section interactions: No-message sequence, No-button movement logic, and Yes celebration behavior/effects.",
+    "Keep the site’s romantic theme and continue avoiding blue/purple tones in UI styling."
   ],
   "nonGoals": [
-    "Do not add new timeline events or change event ordering.",
-    "Do not change the proposal text content or the celebration quote text.",
-    "No backend changes (Motoko) are required."
+    "Do not change the proposal headline text or the existing celebration message text.",
+    "Do not add new buttons or new proposal interactions beyond layout/styling and adding the poem content.",
+    "No backend changes."
   ],
   "imageRequirements": {
     "required": [],

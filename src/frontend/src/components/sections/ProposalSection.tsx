@@ -122,6 +122,18 @@ function ProposalSection() {
           </h2>
         </div>
 
+        {/* Romantic poem */}
+        <div className="space-y-4 animate-fade-in px-4">
+          <p className="text-lg sm:text-xl md:text-2xl font-medium text-foreground/90 leading-relaxed whitespace-pre-line">
+            {`की बताने की बात तो नहीं है पर बताने दोगी क्या ?
+इश्क़ बेपनाह हैं तुमसे
+एक बार जताने दोगी क्या
+और तुम नदी, तुम पहाड़, तुम तितली, तुम आसमान हो मेरा
+एक डिबिया में सिंदूर रखा है हमारे पास तुम...
+लगाने दोगी क्या ?`}
+          </p>
+        </div>
+
         {!showCelebration && (
           <div className="space-y-8">
             {/* Reserved message area */}
@@ -137,43 +149,43 @@ function ProposalSection() {
 
             {/* Buttons area */}
             <div className="relative">
-              {/* Static Yes button */}
-              <div className="flex justify-center mb-4">
-                <Button
-                  ref={yesButtonRef}
-                  size="default"
-                  onClick={handleYesClick}
-                  className="text-lg px-8 py-5 h-auto rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-semibold z-20 relative"
-                >
-                  Yes! 💕
-                </Button>
-              </div>
-
-              {/* Play area for moving No button */}
+              {/* Play area for both buttons */}
               <div
                 ref={playAreaRef}
                 className="relative min-h-[200px] w-full flex items-center justify-center"
               >
-                <Button
-                  ref={noButtonRef}
-                  size="default"
-                  variant="outline"
-                  onClick={handleNoClick}
-                  className={`text-base px-6 py-4 h-auto rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-primary/30 hover:border-primary/50 font-semibold z-10 ${
-                    shouldMove ? 'absolute' : ''
-                  }`}
-                  style={
-                    shouldMove
-                      ? {
-                          left: `${noButtonPosition.x}px`,
-                          top: `${noButtonPosition.y}px`,
-                          transition: 'all 0.3s ease-out',
-                        }
-                      : {}
-                  }
-                >
-                  No
-                </Button>
+                {/* Centered row for initial button layout */}
+                <div className={`flex items-center justify-center gap-4 ${shouldMove ? 'absolute inset-0' : ''}`}>
+                  <Button
+                    ref={yesButtonRef}
+                    size="sm"
+                    onClick={handleYesClick}
+                    className="text-sm px-6 py-2 h-auto rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-semibold z-20 relative whitespace-nowrap"
+                  >
+                    Yes! 💕
+                  </Button>
+
+                  <Button
+                    ref={noButtonRef}
+                    size="sm"
+                    variant="outline"
+                    onClick={handleNoClick}
+                    className={`text-sm px-6 py-2 h-auto rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-primary/30 hover:border-primary/50 font-semibold z-10 whitespace-nowrap ${
+                      shouldMove ? 'absolute' : ''
+                    }`}
+                    style={
+                      shouldMove
+                        ? {
+                            left: `${noButtonPosition.x}px`,
+                            top: `${noButtonPosition.y}px`,
+                            transition: 'all 0.3s ease-out',
+                          }
+                        : {}
+                    }
+                  >
+                    No
+                  </Button>
+                </div>
               </div>
             </div>
           </div>

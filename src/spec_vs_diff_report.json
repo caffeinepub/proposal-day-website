@@ -1,32 +1,41 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-07T20:16:50.007Z",
-  "summary": "REQ-21 appears implemented (timeline title updated exactly). REQ-22 appears implemented via updated global warm background palette/gradient and enhanced Hero styling. REQ-23 likely implemented (proposal logic preserved and repo summary claims smaller buttons), but the ProposalSection diff is truncated so the actual button size changes are not directly verifiable from the shown code snippet alone.",
-  "missing_requirements": [],
-  "hallucinated_features": [
+  "generatedAt": "2026-02-07T20:24:48.572Z",
+  "summary": "REQ-24 appears implemented in ProposalSection with side-by-side buttons, smaller sizing, preserved click behaviors, and added collision-avoidance logic to prevent the moving No button from overlapping the Yes button. REQ-25 (poem) is only partially evidenced: the diff summary indicates a poem was added, but the provided poem text is not shown, so exact-text and no-overlap acceptance criteria cannot be confirmed from the truncated diff.",
+  "missing_requirements": [
     {
-      "description": "Changes to horizontal timeline navigation hook (useHorizontalTimelineNav) which is not part of the requested timeline wording, hero/background styling, or proposal button sizing work.",
-      "reason": "BuildRequest does not mention horizontal timeline navigation behavior or types; this appears to be an unrelated refactor/fix.",
+      "id": "REQ-25",
+      "requirement": "Poem text must be displayed exactly as provided by the user (same characters and punctuation).",
+      "reason": "The diff summary mentions a \"romantic Hindi poem\" was added, but the actual poem lines are not visible in the provided truncated ProposalSection diff, so exact matching to the user-provided poem cannot be verified.",
       "evidence": [
+        "frontend/src/components/sections/ProposalSection.tsx (truncated)",
         "frontend-file-summaries.txt"
       ]
     },
     {
-      "description": "Additional Timeline visual/animation changes beyond the single required wording fix (e.g., new grid reveal animation, decorative gradient line, hover scaling).",
-      "reason": "REQ-21 only requests changing one milestone title and explicitly cautions not to modify other timeline content; it does not request Timeline redesign/animation changes.",
+      "id": "REQ-25",
+      "requirement": "Poem must not cause layout overlap/clipping on small screens and must not overlap the celebration view after clicking Yes.",
+      "reason": "No responsive/layout handling for the poem relative to the message/buttons/celebration is visible in the truncated diff; the file summary asserts it, but there is no concrete code evidence provided here to confirm the no-overlap behavior in both normal and celebration states.",
       "evidence": [
-        "frontend/src/components/sections/TimelineSection.tsx"
+        "frontend/src/components/sections/ProposalSection.tsx (truncated)",
+        "frontend-file-summaries.txt"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Added a specific \"romantic Hindi poem\" (content not shown) rather than the explicitly user-provided poem text.",
+      "reason": "BuildRequest requires rendering the user-provided poem exactly as given. The diff summary claims a Hindi poem was added, but the user-provided poem content is not included in the request or visible in the diff snippet, so adding a particular poem may be unrequested/incorrect.",
+      "evidence": [
+        "frontend-file-summaries.txt"
       ]
     }
   ],
   "confidence": 0.64,
   "changed_files": [
     "frontend-file-summaries.txt",
-    "frontend/src/components/sections/HeroSection.tsx",
     "frontend/src/components/sections/ProposalSection.tsx",
-    "frontend/src/components/sections/TimelineSection.tsx",
-    "frontend/src/index.css",
     "project_state.json"
   ]
 }

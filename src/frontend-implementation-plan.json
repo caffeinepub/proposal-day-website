@@ -1,58 +1,39 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Timeline wording fix, warmer hero/background styling, and smaller proposal buttons",
+  "title": "Proposal section layout polish: inline buttons + romantic poem",
   "requirements": [
     {
-      "id": "REQ-21",
-      "summary": "Change the specified Timeline milestone title text to the exact requested wording without altering any other timeline content.",
+      "id": "REQ-24",
+      "summary": "Display “Yes” and “No” buttons side-by-side in a single centered row with smaller sizing, while preserving all existing behaviors and preventing overlap when No moves.",
       "acceptanceCriteria": [
-        "In the Timeline section, the milestone currently titled “First time she came to my home” is changed to exactly “First time you came to my home”.",
-        "No other timeline event titles, dates, or descriptions are modified."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/sections/TimelineSection.tsx",
-          "operation": "modify",
-          "description": "Update only the single matching event title string in the timeline events list from “First time she came to my home” to exactly “First time you came to my home”, leaving all other event fields unchanged."
-        }
-      ]
-    },
-    {
-      "id": "REQ-22",
-      "summary": "Update site-wide background styling and enhance the Hero section visuals with a clean romantic warm palette (no blue/purple), keeping content and single-page layout intact.",
-      "acceptanceCriteria": [
-        "The global page background color (site-wide) is updated to a new cohesive warm/romantic background (no blue/purple hues).",
-        "The Hero section visual presentation is noticeably improved (e.g., background treatment, decorative elements, typography polish) while keeping the existing content and single-page layout intact.",
-        "The site remains responsive across mobile/tablet/desktop and retains readable contrast for all text."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/index.css",
-          "operation": "modify",
-          "description": "Revise global background styling by adjusting the warm background tokens and/or adding a subtle warm romantic background treatment at the body level (e.g., gentle cream/peach/coral gradients or texture) while maintaining readable contrast and avoiding any blue/purple hues."
-        },
-        {
-          "path": "frontend/src/components/sections/HeroSection.tsx",
-          "operation": "modify",
-          "description": "Improve Hero section styling (keeping the same text/content) by enhancing background decoration and typography polish (e.g., richer warm gradient treatments, refined blob/ornament placement, improved spacing) to look more impressive while remaining clean, romantic, and responsive."
-        }
-      ]
-    },
-    {
-      "id": "REQ-23",
-      "summary": "Reduce the visual size of the Proposal Yes/No buttons while preserving all existing interactions and ensuring the moving No button stays visible and non-overlapping.",
-      "acceptanceCriteria": [
-        "The Proposal section “Yes” and “No” buttons are smaller than the current implementation (reduced padding and/or font size) on both mobile and desktop.",
-        "Button labels remain in English and unchanged (including existing punctuation/emojis if present).",
-        "All existing Proposal interactions continue to work: Yes triggers the celebration message and effect; No advances messages and begins moving after the configured number of clicks.",
-        "The “No” button still does not overlap the “Yes” button and stays fully visible within its container while moving."
+        "On initial render (before the No button starts moving), the Yes and No buttons appear in one centered horizontal row with consistent spacing.",
+        "Both buttons are visibly smaller than the current styling and not oversized on mobile or desktop (no text wrapping inside the buttons).",
+        "All existing interactions remain unchanged: Yes triggers the same celebration message and effects; No still advances the message sequence and begins moving after the same number of clicks.",
+        "The No button must never overlap or cover the Yes button at any time, including after it becomes absolutely positioned and moves."
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/sections/ProposalSection.tsx",
           "operation": "modify",
-          "description": "Use the shadcn-ui Button component to reduce the Yes/No button sizing (adjust size prop and/or Tailwind classes for font size/padding/hover scale) while keeping labels unchanged and preserving the existing click/move logic; verify the component's usage instructions before implementing. Also confirm the No button’s play area and movement bounds still keep it fully visible and not overlapping the Yes button across responsive breakpoints."
+          "description": "Restructure the Proposal section buttons area into one centered horizontal row that contains both buttons on initial render. Keep the existing click handlers and the existing No-message + No-movement logic intact, but adjust layout so the No button can become absolutely positioned within a shared play area without ever overlapping the Yes button. Reduce both buttons’ visual size (typography + padding/height) and enforce no-wrapping text. Use the shadcn-ui Button component (compose only; do not modify UI component files). Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-25",
+      "summary": "Render the user-provided romantic poem lines in the Proposal section with polished, readable styling and safe spacing across normal and celebration states.",
+      "acceptanceCriteria": [
+        "The poem is rendered in the Proposal section as multi-line text with intentional line breaks and good spacing.",
+        "The poem text is displayed exactly as provided by the user (same characters and punctuation).",
+        "The poem remains readable on small screens (no clipping/overlap) and does not interfere with the No-message area or the buttons row layout.",
+        "When the celebration view is shown (after clicking Yes), the poem does not cause layout overlap with the celebration message/effect."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/ProposalSection.tsx",
+          "operation": "modify",
+          "description": "Add a dedicated poem block within the Proposal section that renders the provided Hindi poem text exactly as given, preserving line breaks (e.g., via pre-line whitespace handling) and applying warm, romantic, readable typography (no blue/purple tones). Ensure the poem’s spacing does not collide with the headline, No-message area, or the centered buttons row, and that the celebration state layout remains clear with no overlap against the celebration message/effect. Use existing styling utilities and compose existing shadcn-ui primitives only (e.g., Button remains composed, not edited). Verify the component's usage instructions before implementing."
         }
       ]
     }

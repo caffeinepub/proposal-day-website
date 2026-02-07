@@ -1,11 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Refine copy and styling on the single-page site by correcting one Timeline milestone title, improving the site-wide background and Hero presentation (warm/romantic, no blue/purple), and reducing Proposal button sizes without changing behavior.
+**Goal:** Improve the Proposal section layout by placing the “Yes” and “No” buttons side-by-side in a centered row with smaller sizing, and add the provided romantic poem with polished, readable formatting.
 
 **Planned changes:**
-- Update the Timeline milestone title from “First time she came to my home” to exactly “First time you came to my home”, without altering any other Timeline content.
-- Adjust global background styling to a cohesive warm/romantic palette (avoiding blue/purple tones) and enhance the Hero section’s visual styling (clean, more impressive) while keeping the existing content and layout.
-- Reduce the size of the Proposal “Yes” and “No” buttons (e.g., padding/font size) on mobile and desktop while preserving all existing interactions and keeping the moving “No” button visible and non-overlapping.
+- Update the Proposal section button layout so “Yes” and “No” render on the same centered horizontal row with consistent spacing, and reduce button sizing to avoid oversized appearance or text wrapping on mobile/desktop.
+- Preserve all existing Proposal interactions and logic (Yes celebration behavior/effects, No message progression, and No button movement timing), while ensuring the moving No button never overlaps/covers the Yes button.
+- Add the user-provided romantic poem to the Proposal section as multi-line text with intentional line breaks and spacing, ensuring it doesn’t overlap the headline, messages, buttons, or the celebration view.
 
-**User-visible outcome:** The Timeline text reads correctly, the page background and Hero section look more polished and romantic (without blue/purple hues), and the Proposal buttons appear appropriately sized while working exactly as before.
+**User-visible outcome:** In the Proposal section, the “Yes” and “No” buttons appear smaller and aligned side-by-side; the romantic poem is displayed exactly as provided and remains readable without interfering with the existing proposal interactions or celebration view.

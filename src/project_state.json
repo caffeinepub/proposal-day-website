@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 13,
+  "projectStateVersion": 15,
   "summary": "Build a simple, clean, responsive Proposal Day single-page website with Hero, a polished animated vertical Timeline (rounded cards with date/title/1-line description), and an interactive Proposal section with animated text, Yes/No buttons, celebratory confetti/hearts on Yes, and playful escalating No-button messages with eventual random movement.",
   "architectural_notes": [
     "Single-page responsive layout with sections: Hero, Timeline, Proposal",
@@ -207,6 +207,22 @@
         "REQ-23"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-update-the-proposal-section-so-the-yes-and-no-buttons-are-displayed-side-by-side-on-the-same-line-in-a-single-centered-buttons-row-while-preserving-all-current-button-behaviors-yes-triggers-celebration-no-cycles-messages-and-eventually-moves",
+      "title": "Update the Proposal section so the “Yes” and “No” buttons are displayed side-by-side on the same line in a single centered buttons row, while preserving all current button behaviors (Yes triggers celebration; No cycles messages and eventually moves).",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-user-provided-romantic-poem-lines-to-the-proposal-section-ui-and-style-them-so-they-look-polished-and-readable-within-the-section-no-overlap-with-the-headline-messages-or-buttons",
+      "title": "Add the user-provided romantic poem lines to the Proposal section UI and style them so they look polished and readable within the section (no overlap with the headline, messages, or buttons).",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -297,6 +313,12 @@
     {
       "id": "AR-15",
       "summary": "Reduce Yes/No button sizes in the Proposal section (buttons currently too big)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Add the provided Hindi romantic lines/poem to the Proposal section (display when it looks good, likely as part of/alongside the proposal text)",
       "reqIds": [],
       "status": "pending"
     }

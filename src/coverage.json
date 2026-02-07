@@ -1,42 +1,29 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-07T20:16:50.010Z",
+  "generatedAt": "2026-02-07T20:24:48.575Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 3,
-    "implemented": 3,
+    "total": 2,
+    "implemented": 2,
     "items": [
       {
-        "id": "REQ-21",
-        "summary": "Update the Timeline milestone title text from “First time she came to my home” to exactly “First time you came to my home”.",
+        "id": "REQ-24",
+        "summary": "Update the Proposal section so the “Yes” and “No” buttons are displayed side-by-side on the same line in a single centered buttons row, while preserving all current button behaviors (Yes triggers celebration; No cycles messages and eventually moves).",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/sections/TimelineSection.tsx"
+          "frontend/src/components/sections/ProposalSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/sections/TimelineSection.tsx"
+          "frontend/src/components/sections/ProposalSection.tsx"
         ]
       },
       {
-        "id": "REQ-22",
-        "summary": "Revise the website’s overall background color styling and improve the Hero (starting) section styling to look more impressive, while keeping the design clean, romantic, and avoiding blue/purple tones.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/index.css",
-          "frontend/src/components/sections/HeroSection.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/index.css",
-          "frontend/src/components/sections/HeroSection.tsx"
-        ]
-      },
-      {
-        "id": "REQ-23",
-        "summary": "Reduce the size of the “Yes” and “No” buttons in the Proposal section so they are no longer oversized, while preserving their current interactions/behavior (Yes triggers celebration; No shows escalating messages and moves after a few clicks).",
+        "id": "REQ-25",
+        "summary": "Add the user-provided romantic poem lines to the Proposal section UI and style them so they look polished and readable within the section (no overlap with the headline, messages, or buttons).",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/sections/ProposalSection.tsx"
@@ -52,10 +39,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/sections/HeroSection.tsx",
     "frontend/src/components/sections/ProposalSection.tsx",
-    "frontend/src/components/sections/TimelineSection.tsx",
-    "frontend/src/index.css",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",
