@@ -1,7 +1,5 @@
-import { Heart, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Heart } from 'lucide-react';
 import { useInView } from '@/hooks/useInView';
-import { useHorizontalTimelineNav } from '@/hooks/useHorizontalTimelineNav';
-import { Button } from '@/components/ui/button';
 
 interface TimelineEvent {
   date: string;
@@ -37,7 +35,7 @@ const events: TimelineEvent[] = [
   },
   {
     date: '29 Apr 2022',
-    title: 'First time she came to my home',
+    title: 'First time you came to my home',
     description: 'It felt like home already',
   },
   {
@@ -53,7 +51,7 @@ function TimelineItem({ event, index }: { event: TimelineEvent; index: number })
   return (
     <div
       ref={ref}
-      className={`flex-shrink-0 w-80 snap-center ${isInView ? 'animate-slide-in-left' : 'opacity-0'}`}
+      className={`${isInView ? 'animate-timeline-reveal' : 'opacity-0'}`}
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div className="relative h-full">
@@ -78,9 +76,6 @@ function TimelineItem({ event, index }: { event: TimelineEvent; index: number })
 }
 
 function TimelineSection() {
-  const { containerRef, canScrollLeft, canScrollRight, scrollLeft, scrollRight, hasInteracted } =
-    useHorizontalTimelineNav();
-
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-background to-muted/20">
       <div className="max-w-7xl mx-auto">
@@ -90,71 +85,15 @@ function TimelineSection() {
         </div>
 
         <div className="relative">
-          {/* Horizontal timeline line */}
+          {/* Decorative timeline line */}
           <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
 
-          {/* Scroll hint - fades out after interaction */}
-          <div
-            className={`text-center mb-4 transition-opacity duration-500 ${
-              hasInteracted ? 'opacity-0 pointer-events-none' : 'opacity-100'
-            }`}
-          >
-            <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
-              <span>Scroll to explore</span>
-              <ChevronRight className="w-4 h-4 animate-pulse" />
-            </p>
-          </div>
-
-          {/* Navigation controls */}
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={scrollLeft}
-              disabled={!canScrollLeft}
-              className="rounded-full shadow-sm disabled:opacity-30 transition-all"
-              aria-label="Scroll left"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={scrollRight}
-              disabled={!canScrollRight}
-              className="rounded-full shadow-sm disabled:opacity-30 transition-all"
-              aria-label="Scroll right"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </Button>
-          </div>
-
-          {/* Scrollable timeline with edge fades */}
-          <div className="relative timeline-scroll-container">
-            {/* Left fade overlay */}
-            <div
-              className={`absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none transition-opacity duration-300 ${
-                canScrollLeft ? 'opacity-100' : 'opacity-0'
-              }`}
-            />
-
-            {/* Right fade overlay */}
-            <div
-              className={`absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none transition-opacity duration-300 ${
-                canScrollRight ? 'opacity-100' : 'opacity-0'
-              }`}
-            />
-
-            {/* Scrollable content */}
-            <div
-              ref={containerRef}
-              className="overflow-x-auto overflow-y-hidden scrollbar-hide scroll-smooth snap-x snap-mandatory pb-4"
-            >
-              <div className="flex gap-8 px-4 pt-12 min-w-max">
-                {events.map((event, index) => (
-                  <TimelineItem key={index} event={event} index={index} />
-                ))}
-              </div>
+          {/* Responsive grid layout */}
+          <div className="pt-12 pb-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-4">
+              {events.map((event, index) => (
+                <TimelineItem key={index} event={event} index={index} />
+              ))}
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 9,
+  "projectStateVersion": 13,
   "summary": "Build a simple, clean, responsive Proposal Day single-page website with Hero, a polished animated vertical Timeline (rounded cards with date/title/1-line description), and an interactive Proposal section with animated text, Yes/No buttons, celebratory confetti/hearts on Yes, and playful escalating No-button messages with eventual random movement.",
   "architectural_notes": [
     "Single-page responsive layout with sections: Hero, Timeline, Proposal",
@@ -9,14 +9,20 @@
     "Use scroll-triggered soft fade/slide animations for timeline cards",
     "Proposal section includes both Yes and No buttons; No button cycles through predefined messages per click and later moves randomly",
     "Timeline layout/interaction should not rely on a vertical-scroll behavior the user dislikes (revise UX to an alternative presentation while keeping content accessible).",
-    "If using a horizontal/non-vertical timeline, include clear date/time labels and obvious navigation (arrows/dots/scroll hint) so users understand how to view all events."
+    "If using a horizontal/non-vertical timeline, include clear date/time labels and obvious navigation (arrows/dots/scroll hint) so users understand how to view all events.",
+    "Timeline UX constraint: do not use horizontally scrolling text/content or previous/next icon controls; present the timeline in an alternative, non-scroll-based interaction.",
+    "Timeline content copy update requested: change milestone text to “First time you came to my home”.",
+    "User requests a more impressive look for the overall background and starting (Hero) section."
   ],
   "known_issues": [
     "Proposal section: No button overlaps the Yes button.",
     "Proposal section: The funny/escalating No-button message text is overlapping/misaligned (layout issue).",
-    "Timeline (revised horizontal/non-vertical layout): date/time and how to navigate the timeline are not clear to the user; needs clearer affordance/labels."
+    "Timeline (revised horizontal/non-vertical layout): date/time and how to navigate the timeline are not clear to the user; needs clearer affordance/labels.",
+    "User dislikes the current revised timeline UX because it relies on scrolling text and/or previous/next icons; timeline interaction needs a different approach.",
+    "Proposal section: Yes/No buttons are too large; needs resizing.",
+    "Visual design: user dislikes the current overall background color and the starting (Hero) section styling; needs improvement."
   ],
-  "isFixRequest": false,
+  "isFixRequest": true,
   "existing_features": [
     {
       "id": "feature-create-a-simple-clean-responsive-single-page-proposal-day-website-with-three-sections-hero-timeline-and-proposal",
@@ -161,6 +167,46 @@
         "REQ-18"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-horizontally-scrollable-timeline-section-ux-with-a-non-scroll-non-carousel-layout-that-shows-all-timeline-events-at-once-without-requiring-horizontal-scrolling-or-any-previous-next-icon-controls",
+      "title": "Replace the current horizontally scrollable Timeline section UX with a non-scroll, non-carousel layout that shows all timeline events at once without requiring horizontal scrolling or any previous/next icon controls.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-keep-the-timeline-cards-reveal-entrance-animation-behavior-but-adapt-it-to-the-new-non-scroll-timeline-layout-so-each-card-animates-in-cleanly-when-it-enters-the-viewport",
+      "title": "Keep the timeline cards’ reveal/entrance animation behavior, but adapt it to the new non-scroll timeline layout so each card animates in cleanly when it enters the viewport.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-timeline-milestone-title-text-from-first-time-she-came-to-my-home-to-exactly-first-time-you-came-to-my-home",
+      "title": "Update the Timeline milestone title text from “First time she came to my home” to exactly “First time you came to my home”.",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-revise-the-website-s-overall-background-color-styling-and-improve-the-hero-starting-section-styling-to-look-more-impressive-while-keeping-the-design-clean-romantic-and-avoiding-blue-purple-tones",
+      "title": "Revise the website’s overall background color styling and improve the Hero (starting) section styling to look more impressive, while keeping the design clean, romantic, and avoiding blue/purple tones.",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-reduce-the-size-of-the-yes-and-no-buttons-in-the-proposal-section-so-they-are-no-longer-oversized-while-preserving-their-current-interactions-behavior-yes-triggers-celebration-no-shows-escalating-messages-and-moves-after-a-few-clicks",
+      "title": "Reduce the size of the “Yes” and “No” buttons in the Proposal section so they are no longer oversized, while preserving their current interactions/behavior (Yes triggers celebration; No shows escalating messages and moves after a few clicks).",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -227,6 +273,30 @@
     {
       "id": "AR-11",
       "summary": "Improve the revised (non-vertical) Timeline UX so the date/time is clearly visible/understandable and the horizontal interaction looks polished (e.g., clearer labels + navigation/scroll affordance)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Revise Timeline presentation again: avoid horizontally scrolling text and avoid previous/next icon controls; use a different timeline interaction the user prefers",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Update timeline item text from “First time she came to my home” to “First time you came to my home”",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Revise the website background color and the starting (hero) section styling to be more impressive (user dislikes current look)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Reduce Yes/No button sizes in the Proposal section (buttons currently too big)",
       "reqIds": [],
       "status": "pending"
     }

@@ -1,12 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Make the horizontal Timeline section immediately understandable as horizontally scrollable, easier to scan for date/time, and more visually polished while staying compact and romantic.
+**Goal:** Refine copy and styling on the single-page site by correcting one Timeline milestone title, improving the site-wide background and Hero presentation (warm/romantic, no blue/purple), and reducing Proposal button sizes without changing behavior.
 
 **Planned changes:**
-- Add clear horizontal navigation affordances (at least two), such as subtle left/right edge fades plus an inline English hint or lightweight arrow controls.
-- Improve each timeline card’s date/time readability and scanability (typography/contrast/spacing) across mobile and desktop without changing any event text or order.
-- Add optional non-intrusive navigation helpers (e.g., snap-to-card scrolling and/or left/right controls that advance one card) that work well on touch and mouse/trackpad and don’t overlap content on small screens.
-- Refine timeline visual cohesion (alignment, spacing, decorative line/dots) while preserving the existing card layout and reveal/entrance animation style, and avoiding blue/purple tones.
+- Update the Timeline milestone title from “First time she came to my home” to exactly “First time you came to my home”, without altering any other Timeline content.
+- Adjust global background styling to a cohesive warm/romantic palette (avoiding blue/purple tones) and enhance the Hero section’s visual styling (clean, more impressive) while keeping the existing content and layout.
+- Reduce the size of the Proposal “Yes” and “No” buttons (e.g., padding/font size) on mobile and desktop while preserving all existing interactions and keeping the moving “No” button visible and non-overlapping.
 
-**User-visible outcome:** Users can instantly tell the Timeline scrolls horizontally, can quickly read and compare milestone dates/times, and can move between milestones smoothly with a more premium, finished look.
+**User-visible outcome:** The Timeline text reads correctly, the page background and Hero section look more polished and romantic (without blue/purple hues), and the Proposal buttons appear appropriately sized while working exactly as before.

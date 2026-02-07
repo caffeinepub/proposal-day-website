@@ -1,74 +1,72 @@
 {
   "kind": "build_request",
-  "title": "Make the horizontal timeline easier to understand and more polished",
+  "title": "Fix timeline wording, improve hero/background styling, and reduce proposal button sizes",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-16",
-      "text": "Improve the horizontal Timeline section so users immediately understand it is horizontally scrollable and can clearly read the date/time for each milestone, while keeping the section compact and visually romantic.",
+      "id": "REQ-21",
+      "text": "Update the Timeline milestone title text from “First time she came to my home” to exactly “First time you came to my home”.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "In this all good but time also good but any but can’t know hrer horizontal scroll show time like show your way but i eant to just look good"
+          "First time she came to my home To First time you came to my home"
         ]
       },
       "acceptanceCriteria": [
-        "Timeline clearly communicates horizontal navigation via at least two visual affordances (e.g., subtle left/right edge fades, an inline hint text like “Scroll to explore →”, visible drag/scroll indicator, or arrow controls).",
-        "Each timeline card’s date is visually distinct (font weight/size/contrast) and remains easy to scan on mobile and desktop.",
-        "No user-facing text added for guidance uses non-English language (all guidance/hints must be English).",
-        "Horizontal timeline remains shorter than an equivalent vertical list and does not introduce long vertical scrolling."
+        "In the Timeline section, the milestone currently titled “First time she came to my home” is changed to exactly “First time you came to my home”.",
+        "No other timeline event titles, dates, or descriptions are modified."
       ]
     },
     {
-      "id": "REQ-17",
-      "text": "Add optional, non-intrusive navigation helpers for the horizontal timeline to make browsing milestones feel smooth and “finished” (e.g., snap-to-card behavior and/or left-right controls that scroll one card at a time).",
+      "id": "REQ-22",
+      "text": "Revise the website’s overall background color styling and improve the Hero (starting) section styling to look more impressive, while keeping the design clean, romantic, and avoiding blue/purple tones.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "can’t know hrer horizontal scroll show time",
-          "i eant to just look good"
+          "background colour of while web and staring part of web i dont like make impressive"
         ]
       },
       "acceptanceCriteria": [
-        "Users can reliably move through timeline items without precision scrolling on both trackpad/mouse and touch (mobile).",
-        "If snap behavior is implemented, the scroll position settles cleanly on a card boundary (no awkward half-visible cards after interaction).",
-        "Any added controls do not overlap timeline content and remain accessible on small screens."
+        "The global page background color (site-wide) is updated to a new cohesive warm/romantic background (no blue/purple hues).",
+        "The Hero section visual presentation is noticeably improved (e.g., background treatment, decorative elements, typography polish) while keeping the existing content and single-page layout intact.",
+        "The site remains responsive across mobile/tablet/desktop and retains readable contrast for all text."
       ]
     },
     {
-      "id": "REQ-18",
-      "text": "Polish the Timeline section visuals to look cleaner and more premium while preserving the existing events, card layout, and reveal animation style (no new content; only presentation/UX improvements).",
+      "id": "REQ-23",
+      "text": "Reduce the size of the “Yes” and “No” buttons in the Proposal section so they are no longer oversized, while preserving their current interactions/behavior (Yes triggers celebration; No shows escalating messages and moves after a few clicks).",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "i eant to just look good"
+          "yes and no btuon was toobig so change this also"
         ]
       },
       "acceptanceCriteria": [
-        "All existing timeline events (date, title, 1-line description) remain unchanged and in the same order as currently implemented.",
-        "Existing entrance/reveal animation behavior remains (items animate in as they come into view), but the overall timeline looks more cohesive (spacing, alignment, and decorative line/dots feel intentional).",
-        "Design continues to avoid blue/purple tones for timeline UI elements."
+        "The Proposal section “Yes” and “No” buttons are smaller than the current implementation (reduced padding and/or font size) on both mobile and desktop.",
+        "Button labels remain in English and unchanged (including existing punctuation/emojis if present).",
+        "All existing Proposal interactions continue to work: Yes triggers the celebration message and effect; No advances messages and begins moving after the configured number of clicks.",
+        "The “No” button still does not overlap the “Yes” button and stays fully visible within its container while moving."
       ]
     }
   ],
   "constraints": [
     "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
-    "Keep the timeline content (dates/titles/descriptions) exactly as currently defined in the Timeline section; do not add/remove milestones.",
-    "Do not introduce blue/purple tones into new UI elements."
+    "Keep the app as a single-page site with the existing three sections (Hero, Timeline, Proposal).",
+    "Avoid blue/purple tones in the updated background/hero styling and keep a romantic, clean look."
   ],
   "nonGoals": [
-    "Changing the Hero section content or layout.",
-    "Changing Proposal section behavior (Yes/No interactions) as part of this request.",
-    "Adding backend logic, storage, or any new canister methods."
+    "Do not add new timeline events or change event ordering.",
+    "Do not change the proposal text content or the celebration quote text.",
+    "No backend changes (Motoko) are required."
   ],
   "imageRequirements": {
     "required": [],

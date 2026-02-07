@@ -2,10 +2,28 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-improve-the-horizontal-timeline-section-so-users-immediately-understand-it-is-horizontally-scrollable-and-can-clearly-read-the-date-time-for-each-milestone-while-keeping-the-section-compact-and-visually-romantic",
-      "featureTitle": "Improve the horizontal Timeline section so users immediately understand it is horizontally scrollable and can clearly read the date/time for each milestone, while keeping the section compact and visually romantic.",
+      "featureId": "feature-update-the-timeline-milestone-title-text-from-first-time-she-came-to-my-home-to-exactly-first-time-you-came-to-my-home",
+      "featureTitle": "Update the Timeline milestone title text from “First time she came to my home” to exactly “First time you came to my home”.",
       "files": [
-        "frontend/src/components/sections/TimelineSection.tsx",
+        "frontend/src/components/sections/TimelineSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-21"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-revise-the-website-s-overall-background-color-styling-and-improve-the-hero-starting-section-styling-to-look-more-impressive-while-keeping-the-design-clean-romantic-and-avoiding-blue-purple-tones",
+      "featureTitle": "Revise the website’s overall background color styling and improve the Hero (starting) section styling to look more impressive, while keeping the design clean, romantic, and avoiding blue/purple tones.",
+      "files": [
+        "frontend/src/components/sections/HeroSection.tsx",
         "frontend/src/index.css"
       ],
       "components": [
@@ -16,16 +34,15 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-16"
+        "REQ-22"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-add-optional-non-intrusive-navigation-helpers-for-the-horizontal-timeline-to-make-browsing-milestones-feel-smooth-and-finished-e-g-snap-to-card-behavior-and-or-left-right-controls-that-scroll-one-card-at-a-time",
-      "featureTitle": "Add optional, non-intrusive navigation helpers for the horizontal timeline to make browsing milestones feel smooth and “finished” (e.g., snap-to-card behavior and/or left-right controls that scroll one card at a time).",
+      "featureId": "feature-reduce-the-size-of-the-yes-and-no-buttons-in-the-proposal-section-so-they-are-no-longer-oversized-while-preserving-their-current-interactions-behavior-yes-triggers-celebration-no-shows-escalating-messages-and-moves-after-a-few-clicks",
+      "featureTitle": "Reduce the size of the “Yes” and “No” buttons in the Proposal section so they are no longer oversized, while preserving their current interactions/behavior (Yes triggers celebration; No shows escalating messages and moves after a few clicks).",
       "files": [
-        "frontend/src/components/sections/TimelineSection.tsx",
-        "frontend/src/hooks/useHorizontalTimelineNav.ts"
+        "frontend/src/components/sections/ProposalSection.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -35,26 +52,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-17"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-polish-the-timeline-section-visuals-to-look-cleaner-and-more-premium-while-preserving-the-existing-events-card-layout-and-reveal-animation-style-no-new-content-only-presentation-ux-improvements",
-      "featureTitle": "Polish the Timeline section visuals to look cleaner and more premium while preserving the existing events, card layout, and reveal animation style (no new content; only presentation/UX improvements).",
-      "files": [
-        "frontend/src/components/sections/TimelineSection.tsx",
-        "frontend/src/index.css"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-18"
+        "REQ-23"
       ],
       "confidence": "high"
     }

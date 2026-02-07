@@ -1,49 +1,31 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-07T20:04:41.946Z",
-  "summary": "The diff substantially updates the Timeline section with clearer horizontal navigation (hint text + left/right controls) and more distinct date styling, and adds a dedicated navigation hook. However, due to truncation, key implementation details for scroll snapping/scroll container behavior and edge fades cannot be fully verified. The diff also appears to introduce unrelated changes to the Proposal section behavior and broader global theming beyond the Timeline-focused request.",
-  "missing_requirements": [
-    {
-      "id": "REQ-17",
-      "requirement": "If snap behavior is implemented, the scroll position settles cleanly on a card boundary (no awkward half-visible cards after interaction).",
-      "reason": "Timeline items have `snap-center`, but the diff excerpt does not show the scroll container having the required scroll-snap container classes/properties (e.g., `snap-x`, `snap-mandatory`) or any other mechanism guaranteeing clean card-boundary settling. The file is truncated before the scroll container markup/classes are shown.",
-      "evidence": [
-        "frontend/src/components/sections/TimelineSection.tsx (truncated)"
-      ]
-    },
-    {
-      "id": "REQ-16",
-      "requirement": "Timeline clearly communicates horizontal navigation via at least two visual affordances (e.g., subtle left/right edge fades, an inline hint text like “Scroll to explore →”, visible drag/scroll indicator, or arrow controls).",
-      "reason": "One affordance is clearly present (English hint text 'Scroll to explore' with chevron). The second affordance is likely the arrow controls, but the controls implementation is truncated before confirming they render and are positioned non-overlapping; edge-fade overlays are only mentioned in a separate summary file, not shown in the code excerpt.",
-      "evidence": [
-        "frontend/src/components/sections/TimelineSection.tsx (truncated)",
-        "frontend-file-summaries.txt"
-      ]
-    }
-  ],
+  "generatedAt": "2026-02-07T20:16:50.007Z",
+  "summary": "REQ-21 appears implemented (timeline title updated exactly). REQ-22 appears implemented via updated global warm background palette/gradient and enhanced Hero styling. REQ-23 likely implemented (proposal logic preserved and repo summary claims smaller buttons), but the ProposalSection diff is truncated so the actual button size changes are not directly verifiable from the shown code snippet alone.",
+  "missing_requirements": [],
   "hallucinated_features": [
     {
-      "description": "Changes to Proposal section behavior, including No button random movement after 3 clicks with collision avoidance and playful messages, and Yes-triggered celebration with an exact quote.",
-      "reason": "The BuildRequest explicitly states changing Proposal section behavior is a non-goal; these behaviors are described as present/updated in the diff summary file.",
+      "description": "Changes to horizontal timeline navigation hook (useHorizontalTimelineNav) which is not part of the requested timeline wording, hero/background styling, or proposal button sizing work.",
+      "reason": "BuildRequest does not mention horizontal timeline navigation behavior or types; this appears to be an unrelated refactor/fix.",
       "evidence": [
         "frontend-file-summaries.txt"
       ]
     },
     {
-      "description": "Broad global theme/palette overhaul (warm coral/peach/cream OKLCH tokens across light/dark) beyond Timeline-specific polishing.",
-      "reason": "The BuildRequest is focused on improving/polishing the horizontal Timeline; the diff includes extensive global CSS variable changes that affect the entire site, not just the Timeline section.",
+      "description": "Additional Timeline visual/animation changes beyond the single required wording fix (e.g., new grid reveal animation, decorative gradient line, hover scaling).",
+      "reason": "REQ-21 only requests changing one milestone title and explicitly cautions not to modify other timeline content; it does not request Timeline redesign/animation changes.",
       "evidence": [
-        "frontend/src/index.css (truncated)",
-        "frontend-file-summaries.txt"
+        "frontend/src/components/sections/TimelineSection.tsx"
       ]
     }
   ],
-  "confidence": 0.63,
+  "confidence": 0.64,
   "changed_files": [
     "frontend-file-summaries.txt",
+    "frontend/src/components/sections/HeroSection.tsx",
+    "frontend/src/components/sections/ProposalSection.tsx",
     "frontend/src/components/sections/TimelineSection.tsx",
-    "frontend/src/hooks/useHorizontalTimelineNav.ts",
     "frontend/src/index.css",
     "project_state.json"
   ]

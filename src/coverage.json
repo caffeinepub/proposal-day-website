@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-07T20:04:41.949Z",
+  "generatedAt": "2026-02-07T20:16:50.010Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,42 +11,38 @@
     "implemented": 3,
     "items": [
       {
-        "id": "REQ-16",
-        "summary": "Improve the horizontal Timeline section so users immediately understand it is horizontally scrollable and can clearly read the date/time for each milestone, while keeping the section compact and visually romantic.",
+        "id": "REQ-21",
+        "summary": "Update the Timeline milestone title text from “First time she came to my home” to exactly “First time you came to my home”.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/sections/TimelineSection.tsx",
-          "frontend/src/index.css"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/sections/TimelineSection.tsx",
-          "frontend/src/index.css"
-        ]
-      },
-      {
-        "id": "REQ-17",
-        "summary": "Add optional, non-intrusive navigation helpers for the horizontal timeline to make browsing milestones feel smooth and “finished” (e.g., snap-to-card behavior and/or left-right controls that scroll one card at a time).",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/hooks/useHorizontalTimelineNav.ts",
           "frontend/src/components/sections/TimelineSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/hooks/useHorizontalTimelineNav.ts",
           "frontend/src/components/sections/TimelineSection.tsx"
         ]
       },
       {
-        "id": "REQ-18",
-        "summary": "Polish the Timeline section visuals to look cleaner and more premium while preserving the existing events, card layout, and reveal animation style (no new content; only presentation/UX improvements).",
+        "id": "REQ-22",
+        "summary": "Revise the website’s overall background color styling and improve the Hero (starting) section styling to look more impressive, while keeping the design clean, romantic, and avoiding blue/purple tones.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/sections/TimelineSection.tsx",
-          "frontend/src/index.css"
+          "frontend/src/index.css",
+          "frontend/src/components/sections/HeroSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/sections/TimelineSection.tsx",
-          "frontend/src/index.css"
+          "frontend/src/index.css",
+          "frontend/src/components/sections/HeroSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-23",
+        "summary": "Reduce the size of the “Yes” and “No” buttons in the Proposal section so they are no longer oversized, while preserving their current interactions/behavior (Yes triggers celebration; No shows escalating messages and moves after a few clicks).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/sections/ProposalSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/sections/ProposalSection.tsx"
         ]
       }
     ]
@@ -56,8 +52,9 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
+    "frontend/src/components/sections/HeroSection.tsx",
+    "frontend/src/components/sections/ProposalSection.tsx",
     "frontend/src/components/sections/TimelineSection.tsx",
-    "frontend/src/hooks/useHorizontalTimelineNav.ts",
     "frontend/src/index.css",
     "project_state.json",
     "scratch/component-selection.json",

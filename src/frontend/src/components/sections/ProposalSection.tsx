@@ -141,9 +141,9 @@ function ProposalSection() {
               <div className="flex justify-center mb-4">
                 <Button
                   ref={yesButtonRef}
-                  size="lg"
+                  size="default"
                   onClick={handleYesClick}
-                  className="text-xl px-12 py-8 h-auto rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-semibold z-20 relative"
+                  className="text-lg px-8 py-5 h-auto rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-semibold z-20 relative"
                 >
                   Yes! 💕
                 </Button>
@@ -156,10 +156,10 @@ function ProposalSection() {
               >
                 <Button
                   ref={noButtonRef}
-                  size="lg"
+                  size="default"
                   variant="outline"
                   onClick={handleNoClick}
-                  className={`text-xl px-12 py-8 h-auto rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-primary/30 hover:border-primary/50 font-semibold z-10 ${
+                  className={`text-base px-6 py-4 h-auto rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-primary/30 hover:border-primary/50 font-semibold z-10 ${
                     shouldMove ? 'absolute' : ''
                   }`}
                   style={
